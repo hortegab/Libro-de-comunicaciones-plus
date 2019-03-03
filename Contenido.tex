@@ -1,0 +1,108 @@
+\documentclass[10pt,a4paper]{report}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage[hidelinks]{hyperref}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{cite} % para contraer referencias
+\usepackage{makeidx}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{multirow, array}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{subfig} %Para poner varias figuras en 1 sola
+\renewcommand{\thefigure}{\arabic{figure}} 
+\usepackage{hyperref}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\titleformat
+{\chapter} % command
+[display] % shape
+{\bfseries\LARGE\itshape} % format
+{\hfill Capítulo \thechapter \hfill} % label
+{0ex} % sep 
+{
+    %\rule{\textwidth}{0pt}
+    \vspace{0ex}
+    \centering
+} % before-code
+[
+\vspace{-0.5ex}% 
+\rule{\textwidth}{0pt}
+] % after-code
+
+\author{Homero Ortega Boada}
+\title{Libro de comunicaciones}
+\usepackage[left=4cm,right=2cm,top=3cm,bottom=3cm]{geometry}
+
+\renewcommand{\figurename}{Figura}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\chaptername}{Capítulo}		
+\renewcommand{\contentsname}{Tabla de contenido}
+
+\renewcommand{\listfigurename}{Índice de figuras}
+\renewcommand{\listtablename}{Índice de tablas}
+%%%%%%%%%%%%%% REFERENCIAS %%%%%%%%%%%
+
+
+
+  
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addto\captionsspanish{\renewcommand{\contentsname}%
+    {Tabla de contenido}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\include{Portada}
+\tableofcontents
+\listoffigures
+\listoftables
+\include{0_0_0Introduccion}
+\include{0_0_1Antecedentes}
+\include{0_0_2gnuradio}
+\include{0_0_3SDR}
+%\include{0_0_3Transformada-RF}
+%\include{0_0_4Antena}
+%\include{0_0_6SDR}
+%\include{0_0_7PCM}
+%\include{0_0_8Densidad-espectral}
+%\include{0_0_9FFT-gnu}
+%\include{0_1_0Nyquist}
+%\include{0_2_0Ruido-Blanco}
+%\include{0_3_0Scrambling}
+\include{0_0_4Comdig1}
+\include{0_0_5Comdig2}
+\include{0_0_6Multiusuario}
+\include{0_0_7Television-digital}
+%\include{0_0_4canal_SDR}
+%\include{0_5_0Ruido}
+%\include{0_6_0Rege-bits}
+%\include{0_7_0Criterio-nyquist}
+%\include{0_8_0Filtrado-acopla}
+%\include{0_0_5Modulacion-digital}
+%\include{0_0_6Multiusuario}
+%\include{0_0_7Television-digital}
+%\include{1_0_0Curvas-ber}
+%\include{2_0_0Feno-propagacion}
+%\include{3_0_0Canal-Propa}
+%\include{4_0_0Simu-canal}
+%\include{5_0_0Solu-GNU}
+%\include{6_0_0Medicion-Propa}
+%\include{7_0_0Guias}
+%\include{8_0_0Trabajos-comple}
+\include{9_0_0MaterialOscarR}
+
+%%%%%%%%%%%%%%%% 	BIBLIOGRAFIA	%%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Bibliografía}%para que aparezca en la tabla de contenidos
+\bibliographystyle{apalike}
+\bibliography{Referencias.bib}
+
+\end{document}
